@@ -40,6 +40,7 @@ class TicTacToe
   end
   def valid_move?(index)
     # !self.position_taken?(index) && !!self.board[index]
+
     !position_taken?(index) && index.between?(0,8)
   end
   def turn_count
@@ -50,12 +51,14 @@ class TicTacToe
   end
 
   def turn
+    puts 'Please enter 1-9:'
     input = input_to_index(gets.strip)
     if valid_move?(input)
       player = self.current_player
       self.move(input, player)
       self.display_board
     else
+      puts 'Position Already taken, please select other one.'
       self.turn
     end
   end
@@ -96,6 +99,8 @@ class TicTacToe
   end
 
   def play
+    puts 'Welcome to Tic Tac Toe:'
+    self.display_board
     turn until over?
     puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
   end
