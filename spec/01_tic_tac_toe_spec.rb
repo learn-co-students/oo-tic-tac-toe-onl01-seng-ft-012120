@@ -304,7 +304,7 @@ describe './lib/tic_tac_toe.rb' do
 
       it 'returns nil when no winner' do
         game = TicTacToe.new
-        board = ["X", "O", " ", " ", " ", " ", " ", "O", "X"]
+        board = ["X", "O", " ", " ", " ", " ", " ", "O", "X"] #["X", "O", "X", "O", "X", "X", "O", "X", "O"] 
         game.instance_variable_set(:@board, board)
 
         expect(game.winner).to be_nil
