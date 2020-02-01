@@ -1,9 +1,7 @@
 class TicTacToe
-  attr_accessor :board
-
-  def initialize
+  def initialize(board = nil)
     @board = board || Array.new(9, " ")
-  end
+  end 
 
   WIN_COMBINATIONS = [
   [0,1,2],
@@ -28,7 +26,7 @@ class TicTacToe
     return -1 + str.to_i
   end
 
-  def move(idx, tok)
+  def move(idx, tok = "X")
     @board[idx] = tok
   end
 
