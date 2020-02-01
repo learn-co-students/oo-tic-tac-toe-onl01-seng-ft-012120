@@ -58,38 +58,39 @@ class TicTacToe
   end   
     
   def turn   
-    # receives user input via the gets method (FAILED - 1)
-    # calls #input_to_index, #valid_move?, and #current_player (FAILED - 2)
-    # makes valid moves and displays the board (FAILED - 3)
-    # asks for input again after a failed validation (FAILED - 4)
+    # receives user input via the gets method
+    # calls #input_to_index, #valid_move?, and #current_player
+    # makes valid moves and displays the board
+    # asks for input again after a failed validation 
   end  
   
-#   def won? #WIN_COMBINATIONS, false/nil = no win, return array if win 
+  def won? #WIN_COMBINATIONS, false/nil = no win, return array if win 
 #       returns false for a draw
-#       returns the winning combo for a win (FAILED - 5)
-#   end   
+#       returns the winning combo for a win 
+  end   
   
 #   def full?
-#       returns true for a draw (FAILED - 6)
-#       returns false for an in-progress game (FAILED - 7)
+#       if there is " " || "" space use include? to check
+#       then false for an in-progress game 
+#       else returns true for a draw
 #   end
   
 #   def draw?
-#       returns true for a draw (FAILED - 8)
-#       returns false for a won game (FAILED - 9)
-#       returns false for an in-progress game (FAILED - 10)
+#       returns true for a draw 
+#       returns false for a won game 
+#       returns false for an in-progress game 
 #   end   
 
 #   def over?
-#       returns true for a draw (FAILED - 11)
-#       returns true for a won game (FAILED - 12)
-#       returns false for an in-progress game (FAILED - 13)
+#       returns true for a draw 
+#       returns true for a won game 
+#       returns false for an in-progress game 
 #   end
 
 #   def winner
-#       return X when X won (FAILED - 14)
-#       returns O when O won (FAILED - 15)
-#       returns nil when no winner (FAILED - 16)
+#       return X when X won 
+#       returns O when O won 
+#       returns nil when no winner 
 #   end
 
 end 
@@ -97,19 +98,19 @@ end
 # # ./lib/tic_tac_toe.rb
 #   TicTacToe
 #     #play
-#       asks for players input on a turn of the game (FAILED - 17)
-#       checks if the game is over after every turn (FAILED - 18)
-#       plays the first turn of the game (FAILED - 19)
-#       plays the first few turns of the game (FAILED - 20)
-#       checks if the game is won after every turn (FAILED - 21)
-#       checks if the game is draw after every turn (FAILED - 22)
-#       stops playing if someone has won (FAILED - 23)
-#       congratulates the winner X (FAILED - 24)
-#       congratulates the winner O (FAILED - 25)
-#       stops playing in a draw (FAILED - 26)
-#       prints "Cat's Game!" on a draw (FAILED - 27)
-#       plays through an entire game (FAILED - 28)
+#       asks for players input on a turn of the game 
+#       checks if the game is over after every turn 
+#       plays the first turn of the game 
+#       plays the first few turns of the game 
+#       checks if the game is won after every turn 
+#       checks if the game is draw after every turn 
+#       stops playing if someone has won 
+#       congratulates the winner X 
+#       congratulates the winner O 
+#       stops playing in a draw 
+#       prints "Cat's Game!" on a draw 
+#       plays through an entire game 
 
 # bin/tictactoe
-# instantiates an instance of TicTacToe (FAILED - 29)
-# calls #play on the instance of TicTacToe (FAILED - 30)  
+# instantiates an instance of TicTacToe 
+# calls #play on the instance of TicTacToe   
