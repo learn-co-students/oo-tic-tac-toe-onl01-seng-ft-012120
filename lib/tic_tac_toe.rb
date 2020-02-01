@@ -106,17 +106,15 @@ class TicTacToe
   end
 
 def play
-  
-loop do
-  turn
+  loop do
+    turn
     break if over? === true
   end
   if draw?
     puts "Cat's Game!"
   else
     puts "Congratulations, #{winner}!"
+  end
 end
-
-    
-
+  
 end
