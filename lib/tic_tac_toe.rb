@@ -1,3 +1,4 @@
+require 'pry'
 class TicTacToe
   WIN_COMBINATIONS = [ 
 [0,1,2], # top_row 
@@ -105,7 +106,11 @@ class TicTacToe
   end
   
   def winner
-    
+    if !won?
+      nil
+    else
+      @board[won?[0]]
+    end
   end
   
   def play
