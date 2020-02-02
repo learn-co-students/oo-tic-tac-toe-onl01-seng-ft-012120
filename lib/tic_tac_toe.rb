@@ -1,3 +1,4 @@
+require 'pry'
 class TicTacToe
   WIN_COMBINATIONS = [ 
 [0,1,2], # top_row 
@@ -58,15 +59,36 @@ class TicTacToe
   end
   
   def turn
-    puts 
+    puts "Select your move (1-9)\n"
+    move = gets.chomp
+    move_index = input_to_index(move)
+    if valid_move?(move_index)
+      token = current_player
+      move(move_index, token)
+      display_board
+    else
+      puts "Select your move (1-9)\n"
+      move = gets.chomp
+    end
   end
   
   def won?
-    
+    WIN_COMBINATIONS.each_with_index do |combination_list, index|
+      if combination_list[index].all?(current_player)
+        binding.pry
+        combination_list[index]
+      else
+        false
+      end
+    end
   end
   
   def full?
-    
+    if @board.count{|token| token == ' '} == 0
+      true
+    else
+      false
+    end
   end
   
   def draw?
