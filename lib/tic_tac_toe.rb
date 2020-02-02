@@ -1,4 +1,3 @@
-require 'pry'
 class TicTacToe
   WIN_COMBINATIONS = [ 
 [0,1,2], # top_row 
@@ -74,19 +73,11 @@ class TicTacToe
   
   def won?
     WIN_COMBINATIONS.each do |combinations|
-      if combinations.all? {|x| x == 'X' or x == 'O'}
-        
+      if combination.all? {|combination_set| set == 'X' or combination_set == 'O'}
+        combinations
       else
         false
       end
-    end
-  end
-  
-  def full?
-    if @board.count{|token| token == ' '} == 0
-      true
-    else
-      false
     end
   end
   
