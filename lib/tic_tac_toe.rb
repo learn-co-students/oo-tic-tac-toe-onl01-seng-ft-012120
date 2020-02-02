@@ -72,34 +72,9 @@ class TicTacToe
   end
   
   def won?
-    WIN_COMBINATIONS.each do |combinations|
-      if combinations.all? {|combination| combination == 'X' or combination == 'O'}
-        combinations
-      else
-        false
-      end
+    WIN_COMBINATIONS.find do |indices|
+      values = @board.values_at(*indices)
+      values.all?('X') || values.all?('O')
     end
-  end
-  
-  def draw?
-    if full? and !won?
-      true
-    elsif won?
-      false
-    else
-      false
-    end
-  end
-  
-  def over?
-    
-  end
-  
-  def winner
-    
-  end
-  
-  def play
-    
   end
 end
