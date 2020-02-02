@@ -147,16 +147,20 @@ class TicTacToe
 
   def play
     # asks for players input on a turn of the game 
-    # checks if the game is over after every turn 
+    until over? == true# checks if the game is over after every turn 
+      turn
+    end   
     # plays the first turn of the game 
     # plays the first few turns of the game 
-    # checks if the game is won after every turn 
+    
+    if won? # checks if the game is won after every turn 
     # checks if the game is draw after every turn 
     # stops playing if someone has won 
-    # congratulates the winner X 
-    # congratulates the winner O 
+      puts "Congratulations #{winner}!" # congratulates the #{winner} 
     # stops playing in a draw 
-    # prints "Cat's Game!" on a draw 
+    elsif 
+        puts "Cat's Game!" # prints "Cat's Game!" on a draw 
+    end
     # plays through an entire game 
   end
   
