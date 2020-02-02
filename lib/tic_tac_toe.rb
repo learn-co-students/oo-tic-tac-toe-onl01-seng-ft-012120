@@ -77,4 +77,38 @@ class TicTacToe
       values.all?('X') || values.all?('O')
     end
   end
+  
+  def full?
+    if @board.count(' ') == 0 
+      true
+    else
+      false
+    end
+  end
+  
+  def draw?
+    if full? && !won?
+      true
+    elsif won?
+      false
+    else
+      false
+    end
+  end
+  
+  def over?
+    if won? || full?
+      true
+    else
+      false
+    end
+  end
+  
+  def winner
+    
+  end
+  
+  def play
+    
+  end
 end
