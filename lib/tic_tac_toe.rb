@@ -75,7 +75,7 @@ class TicTacToe
   def won?
     WIN_COMBINATIONS.each do |combination|
       if combination.all?(current_player)
-        
+        combination
       else
         false
       end
