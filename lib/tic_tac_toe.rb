@@ -1,4 +1,3 @@
-require 'pry'
 class TicTacToe
   WIN_COMBINATIONS = [ 
 [0,1,2], # top_row 
@@ -73,12 +72,9 @@ class TicTacToe
   end
   
   def won?
-    WIN_COMBINATIONS.each_with_index do |combination_list, index|
-      if combination_list[index].all?(current_player)
-        binding.pry
-        combination_list[index]
-      else
-        false
+    WIN_COMBINATIONS.each_with_index do |combination, index|
+      if combination.all?(current_player)
+        
       end
     end
   end
@@ -92,7 +88,13 @@ class TicTacToe
   end
   
   def draw?
-    
+    if full? and !won?
+      true
+    elsif won?
+      false
+    else
+      false
+    end
   end
   
   def over?
