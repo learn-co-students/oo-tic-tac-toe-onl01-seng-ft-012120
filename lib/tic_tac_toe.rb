@@ -121,6 +121,19 @@ class TicTacToe
  		else puts "Congratulations #{winner}!"
  		end 
  	end
+ 	
+ 	# Or play could look like this:
+ 	# def play
+  #   until over?
+  #     turn
+  #   end
+
+  #   if won? 
+  #     puts "Congratulations #{winner}!"
+  #   elsif draw?
+  #     puts "Cat's Game!"
+  #   end
+  # end
   
   
 end
