@@ -1,3 +1,8 @@
 #!/usr/bin/env ruby
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
+
+
+# bin/tictactoe
+instance = TicTacToe.new # instantiates a new instance of TicTacToe 
+instance.play # calls .play on the instance of TicTacToe   
